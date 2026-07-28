@@ -256,7 +256,7 @@ def get_review_queue(db: Session = Depends(get_db)):
             overall_confidence=doc.overall_confidence,
             flagged_fields=flagged,
             extracted_json=doc.extracted_json,
-            created_at=str(doc.created_at) if doc.created_at else None,
+            created_at=doc.created_at,
         ))
     return ReviewListResponse(total=len(results), documents=results)
 

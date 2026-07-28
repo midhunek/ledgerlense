@@ -1,5 +1,6 @@
 from __future__ import annotations
 """API request / response Pydantic schemas for all FastAPI endpoints."""
+from datetime import datetime
 from typing import Optional, Any
 from pydantic import BaseModel
 
@@ -41,7 +42,7 @@ class ReviewDocument(BaseModel):
     overall_confidence: Optional[float] = None
     flagged_fields: list[FlaggedField] = []
     extracted_json: Optional[str] = None
-    created_at: Optional[str] = None
+    created_at: Optional[datetime] = None
 
     model_config = {"from_attributes": True}
 
@@ -87,7 +88,7 @@ class DocumentSummary(BaseModel):
     total: Optional[float] = None
     overall_confidence: Optional[float] = None
     status: str
-    created_at: Optional[str] = None
+    created_at: Optional[datetime] = None
 
     model_config = {"from_attributes": True}
 
