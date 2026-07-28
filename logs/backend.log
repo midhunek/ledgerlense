@@ -1,0 +1,164 @@
+INFO:     Started server process [32405]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0WARNING:  Unsupported upgrade request.
+[REDACTED]T10:33:31 [INFO] ledgerlens — GET /health →[REDACTED]s)
+DEBUG: Loaded settings with base_url=https://api.groq.com/openai/v1
+INFO:     127.0.0.1:64272 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T10:33:59 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64292 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:33:59 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64294 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:33:59 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64296 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:33:59 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64298 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:33:59 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64300 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:34:05 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64306 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:34:05 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64308 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:34:05 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64310 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:34:05 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64312 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:34:05 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64314 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:34:06 [INFO] ledgerlens — Received upload: Screenshot[REDACTED]at 2.48.38 PM.png (128926 bytes)
+[REDACTED]T10:34:06 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+[REDACTED]T10:34:06 [INFO] ledgerlens — Resized image from 2242x938 to 2048x856
+[REDACTED]T10:34:06 [INFO] ledgerlens — Sending image to llama-3.2-11b-vision-preview for extraction (124669 bytes after resize)
+[REDACTED]T10:34:08 [ERROR] ledgerlens — Extraction failed for Screenshot[REDACTED]at 2.48.38 PM.png
+Traceback (most recent call last):
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/api/routes.py", line 121, in ingest
+    ext_result = extraction_svc.extract_invoice(image_bytes)
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 109, in extract_invoice
+    response = client.chat.completions.create(
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama-3.2-11b-vision-preview` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+[REDACTED]T10:34:08 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:64316 - "POST /ingest HTTP/1.1" 500 Internal Server Error
+[REDACTED]T10:34:08 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64319 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:34:08 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64321 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:34:08 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64323 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:34:08 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64325 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:34:08 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64327 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:36:57 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:64419 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T10:37:22 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64436 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:37:22 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64438 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:37:22 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64440 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:37:22 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64442 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:37:22 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64444 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:37:29 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64448 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:37:29 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64450 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:37:29 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64452 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:37:29 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64454 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:37:29 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64456 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:37:30 [INFO] ledgerlens — Received upload: Screenshot[REDACTED]at 2.48.38 PM.png (128926 bytes)
+[REDACTED]T10:37:30 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+[REDACTED]T10:37:30 [INFO] ledgerlens — Resized image from 2242x938 to 2048x856
+[REDACTED]T10:37:30 [INFO] ledgerlens — Sending image to llama-3.2-11b-vision-preview for extraction (124669 bytes after resize)
+[REDACTED]T10:37:31 [ERROR] ledgerlens — Extraction failed for Screenshot[REDACTED]at 2.48.38 PM.png
+Traceback (most recent call last):
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/api/routes.py", line 121, in ingest
+    ext_result = extraction_svc.extract_invoice(image_bytes)
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 109, in extract_invoice
+    response = client.chat.completions.create(
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama-3.2-11b-vision-preview` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+[REDACTED]T10:37:31 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:64460 - "POST /ingest HTTP/1.1" 500 Internal Server Error
+[REDACTED]T10:37:31 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64463 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:37:31 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64465 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:37:31 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64467 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:37:31 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64469 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:37:31 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64471 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:37:48 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:64481 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T10:37:56 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64489 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:37:56 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64491 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:37:56 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64493 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:37:56 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64495 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:37:56 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64497 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:38:03 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64503 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:38:03 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64505 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:38:03 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64507 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:38:03 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64509 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:38:03 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64511 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T10:38:04 [INFO] ledgerlens — Received upload: Screenshot[REDACTED]at 2.48.38 PM.png (128926 bytes)
+[REDACTED]T10:38:04 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+[REDACTED]T10:38:05 [INFO] ledgerlens — Resized image from 2242x938 to 2048x856
+[REDACTED]T10:38:05 [INFO] ledgerlens — Sending image to llama-3.2-11b-vision-preview for extraction (124669 bytes after resize)
+[REDACTED]T10:38:05 [ERROR] ledgerlens — Extraction failed for Screenshot[REDACTED]at 2.48.38 PM.png
+Traceback (most recent call last):
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/api/routes.py", line 121, in ingest
+    ext_result = extraction_svc.extract_invoice(image_bytes)
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 109, in extract_invoice
+    response = client.chat.completions.create(
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama-3.2-11b-vision-preview` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+[REDACTED]T10:38:05 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:64513 - "POST /ingest HTTP/1.1" 500 Internal Server Error
+[REDACTED]T10:38:05 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:64516 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T10:38:05 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:64518 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T10:38:05 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:64520 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T10:38:05 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:64522 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T10:38:05 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:64524 - "GET /dashboard/daily HTTP/1.1" 200 OK

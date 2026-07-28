@@ -1,0 +1,106 @@
+version: "3.9"
+
+services:
+  # -----------------------------------------------------------------------
+  # FastAPI Backend
+  # -----------------------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../docker/Dockerfile.backend
+    container_name: ledgerlens-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
+      - MODERATION_MODEL=${MODERATION_MODEL:-omni-moderation-latest}
+      - REVIEW_THRESHOLD=${REVIEW_THRESHOLD:-0.75}
+      - MODEL_COST_PER_TOKEN=${MODEL_COST_PER_TOKEN:-0.000005}
+      - DATABASE_URL=sqlite:///./ledgerlens.db
+      - UPLOADS_DIR=uploads
+      - PROCESSED_DIR=processed
+      - DEBUG=false
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/processed:/app/processed
+      - ./backend/logs:/app/logs
+      - ./backend/ledgerlens.db:/app/ledgerlens.db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - ledgerlens-net
+
+  # -----------------------------------------------------------------------
+  # Streamlit Frontend
+  # -----------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    container_name: ledgerlens-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - ledgerlens-net
+
+  # -----------------------------------------------------------------------
+  # Prometheus
+  # -----------------------------------------------------------------------
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: ledgerlens-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/usr/share/prometheus/console_libraries"
+      - "--web.console.templates=/usr/share/prometheus/consoles"
+    restart: unless-stopped
+    networks:
+      - ledgerlens-net
+
+  # -----------------------------------------------------------------------
+  # Grafana
+  # -----------------------------------------------------------------------
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: ledgerlens-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=ledgerlens
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - ledgerlens-net
+
+volumes:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  ledgerlens-net:
+    driver: bridge

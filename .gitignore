@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment — ALL .env files everywhere, at any depth
+# Only .env.example (template with no real keys) is allowed
+.env
+*.env
+**/.env
+**/*.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads / processed images (runtime artifacts)
+backend/uploads/*
+backend/processed/*
+backend/logs/*
+!backend/uploads/.gitkeep
+!backend/processed/.gitkeep
+!backend/logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker build artifacts
+*.tar
+
+# Coverage / testing
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets / keys (extra safety net)
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
