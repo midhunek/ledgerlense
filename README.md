@@ -57,20 +57,20 @@
 ## 🚀 Quick Start (Local)
 
 ### Prerequisites
-- Python 3.11+
+- Python 3.9+
 - Docker Desktop (for the full stack)
-- OpenAI API key (paid account with GPT-4o access)
+- A Groq API key — free at [console.groq.com/keys](https://console.groq.com/keys) *(or an OpenAI key — both supported)*
 
 ### Option A — Docker Compose (Recommended)
 
 ```bash
 # Clone and enter the project
-git clone https://github.com/<your-username>/ledgerlens.git
-cd ledgerlens
+git clone https://github.com/midhunek/ledgerlense.git
+cd ledgerlense
 
 # Create your .env file
 cp .env.example .env
-# Edit .env and paste your OPENAI_API_KEY
+# Edit .env and set your API key (Groq or OpenAI — see .env.example for both options)
 
 # Spin up everything
 docker-compose up --build
