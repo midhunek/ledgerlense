@@ -15,6 +15,7 @@ of the correct Pydantic type — no json.loads() needed.
 """
 import base64
 import io
+import re
 from dataclasses import dataclass
 
 import json
@@ -78,6 +79,24 @@ def _resize_image(image_bytes: bytes) -> tuple[bytes, str]:
     return buf.getvalue(), "image/png"
 
 
+def _extract_json_from_text(text: str) -> str:
+    """
+    Extract a JSON block from a string. Handles markdown blocks or raw text.
+    """
+    # Try to find content between ```json and ```
+    match = re.search(r"```json\s*(.*?)\s*```", text, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    # Fallback: find the first { and last }
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end != -1:
+        return text[start : end + 1].strip()
+
+    return text.strip()
+
+
 def extract_invoice(image_bytes: bytes) -> ExtractionResult:
     """
     Extract structured invoice data from raw image bytes.
@@ -105,10 +124,12 @@ def extract_invoice(image_bytes: bytes) -> ExtractionResult:
     )
 
     # Step 3: call completion
-    # Note: Using standard create + manual parse for broad provider compatibility (Groq/OpenAI)
+    # Note: Bypassing strict response_format={"type": "json_object"} to avoid
+    # API-level validation failures with complex documents.
     response = client.chat.completions.create(
         model=settings.OPENAI_MODEL,
         temperature=0,
+        max_tokens=4096,
         messages=[
             {
                 "role": "user",
@@ -119,12 +140,11 @@ def extract_invoice(image_bytes: bytes) -> ExtractionResult:
                     },
                     {
                         "type": "text",
-                        "text": f"{EXTRACTION_PROMPT}\n\nReturn the result in JSON format matching this schema: {json.dumps(InvoiceExtraction.model_json_schema())}",
+                        "text": f"{EXTRACTION_PROMPT}\n\nIMPORTANT: Return only a VALID JSON object. Include ALL keys defined in the schema. Do not include markdown formatting if possible.\n\nSchema to follow:\n{json.dumps(InvoiceExtraction.model_json_schema())}",
                     },
                 ],
             }
         ],
-        response_format={"type": "json_object"},
     )
 
     choice = response.choices[0]
@@ -133,12 +153,13 @@ def extract_invoice(image_bytes: bytes) -> ExtractionResult:
     if not content:
         raise RuntimeError("AI returned empty content")
 
-    # Handle API refusals or errors in content
+    # Step 4: Sanitize and Parse
     try:
-        data = json.loads(content)
+        json_str = _extract_json_from_text(content)
+        data = json.loads(json_str)
         extracted = InvoiceExtraction(**data)
     except Exception as e:
-        logger.error("Failed to parse AI response as InvoiceExtraction: %s", content)
+        logger.error("Failed to parse AI response as InvoiceExtraction. Raw content: %s", content)
         raise RuntimeError(f"Failed to parse extraction result: {str(e)}")
 
     usage = response.usage

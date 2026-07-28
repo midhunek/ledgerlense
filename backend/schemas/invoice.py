@@ -62,13 +62,34 @@ class InvoiceExtraction(BaseModel):
     Every scalar field is a typed wrapper carrying its own confidence score.
     Pass this class directly as response_format to enforce schema at the API level.
     """
-    vendor: StringField = Field(description="Vendor / supplier name")
-    invoice_number: StringField = Field(description="Invoice or receipt number")
-    date: StringField = Field(description="Invoice date in ISO 8601 (YYYY-MM-DD)")
-    currency: StringField = Field(description="Three-letter currency code, e.g. INR, USD")
-    subtotal: FloatField = Field(description="Subtotal before tax")
-    tax: FloatField = Field(description="Tax amount")
-    total: FloatField = Field(description="Grand total including tax")
+    vendor: StringField = Field(
+        default_factory=StringField,
+        description="Vendor / supplier name"
+    )
+    invoice_number: StringField = Field(
+        default_factory=StringField,
+        description="Invoice or receipt number"
+    )
+    date: StringField = Field(
+        default_factory=StringField,
+        description="Invoice date in ISO 8601 (YYYY-MM-DD)"
+    )
+    currency: StringField = Field(
+        default_factory=StringField,
+        description="Three-letter currency code, e.g. INR, USD"
+    )
+    subtotal: FloatField = Field(
+        default_factory=FloatField,
+        description="Subtotal before tax"
+    )
+    tax: FloatField = Field(
+        default_factory=FloatField,
+        description="Tax amount"
+    )
+    total: FloatField = Field(
+        default_factory=FloatField,
+        description="Grand total including tax"
+    )
     line_items: list[LineItem] = Field(
         default_factory=list,
         description="Individual line items from the invoice"

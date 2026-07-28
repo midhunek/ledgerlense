@@ -1,164 +1,471 @@
-INFO:     Started server process [32405]
+INFO:     Started server process [37130]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0WARNING:  Unsupported upgrade request.
-[REDACTED]T10:33:31 [INFO] ledgerlens — GET /health →[REDACTED]s)
-DEBUG: Loaded settings with base_url=https://api.groq.com/openai/v1
-INFO:     127.0.0.1:64272 - "GET /health HTTP/1.1" 200 OK
-[REDACTED]T10:33:59 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64292 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:33:59 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64294 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:33:59 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64296 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:33:59 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64298 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:33:59 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64300 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:34:05 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64306 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:34:05 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64308 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:34:05 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64310 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:34:05 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64312 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:34:05 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64314 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:34:06 [INFO] ledgerlens — Received upload: Screenshot[REDACTED]at 2.48.38 PM.png (128926 bytes)
-[REDACTED]T10:34:06 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
-[REDACTED]T10:34:06 [INFO] ledgerlens — Resized image from 2242x938 to 2048x856
-[REDACTED]T10:34:06 [INFO] ledgerlens — Sending image to llama-3.2-11b-vision-preview for extraction (124669 bytes after resize)
-[REDACTED]T10:34:08 [ERROR] ledgerlens — Extraction failed for Screenshot[REDACTED]at 2.48.38 PM.png
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[REDACTED]T11:58:55 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54803 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T11:58:55 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54805 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T11:58:55 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54807 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T11:58:55 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54809 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T11:58:55 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54811 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T11:59:05 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54813 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T11:59:05 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54815 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T11:59:05 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54817 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T11:59:05 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54819 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T11:59:05 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54821 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T11:59:06 [INFO] ledgerlens — Received upload: sample-images.png (46966 bytes)
+[REDACTED]T11:59:06 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+[REDACTED]T11:59:06 [INFO] ledgerlens — Sending image to qwen/qwen3.6-27b for extraction (227096 bytes after resize)
+[REDACTED]T11:59:13 [INFO] ledgerlens — Extraction complete. vendor=Cloudtail India Private Limited overall_confidence=0.98 tokens=5334 cost=$0.02667
+[REDACTED]T11:59:14 [INFO] ledgerlens — Watermarked image saved: processed/0_watermarked.png
+[REDACTED]T11:59:14 [INFO] ledgerlens — Ingest complete: doc_id=10 status=auto_approved flagged=0
+[REDACTED]T11:59:14 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:54823 - "POST /ingest HTTP/1.1" 200 OK
+[REDACTED]T11:59:14 [INFO] ledgerlens — GET /processed/10 →[REDACTED]s)
+INFO:     127.0.0.1:54826 - "GET /processed/10 HTTP/1.1" 200 OK
+[REDACTED]T11:59:14 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54828 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T11:59:14 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54830 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T11:59:14 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54832 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T11:59:14 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54834 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T11:59:14 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54836 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T11:59:18 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54838 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T11:59:18 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54840 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T11:59:18 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54842 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T11:59:18 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54844 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T11:59:18 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54846 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T11:59:24 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54848 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T11:59:24 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54850 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T11:59:24 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54852 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T11:59:24 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54854 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T11:59:24 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54856 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T11:59:27 [INFO] ledgerlens — Received upload: sample_receipt_template.png (36079 bytes)
+[REDACTED]T11:59:27 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/PIL/Image.py:1047: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+[REDACTED]T11:59:27 [INFO] ledgerlens — Sending image to qwen/qwen3.6-27b for extraction (84994 bytes after resize)
+[REDACTED]T12:00:09 [INFO] ledgerlens — Extraction complete. vendor=Your Company Inc. overall_confidence=1.00 tokens=4527 cost=$0.02264
+[REDACTED]T12:00:09 [INFO] ledgerlens — Watermarked image saved: processed/0_watermarked.png
+[REDACTED]T12:00:09 [INFO] ledgerlens — Ingest complete: doc_id=11 status=auto_approved flagged=0
+[REDACTED]T12:00:09 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:54858 - "POST /ingest HTTP/1.1" 200 OK
+[REDACTED]T12:00:09 [INFO] ledgerlens — GET /processed/11 →[REDACTED]s)
+INFO:     127.0.0.1:54862 - "GET /processed/11 HTTP/1.1" 200 OK
+[REDACTED]T12:00:09 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54864 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:00:09 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54866 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:00:09 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54868 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:00:09 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54871 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:00:09 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54873 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:00:11 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54875 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:00:11 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54877 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:00:11 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54879 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:00:11 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54881 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:00:11 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54883 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:00:20 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:54886 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+[REDACTED]T12:00:44 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:54887 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T12:03:22 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54895 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:03:22 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54897 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:03:22 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54899 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:03:22 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54901 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:03:22 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54903 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:03:30 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54906 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:03:30 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54908 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:03:30 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54910 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:03:30 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54912 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:03:30 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54914 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:03:38 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54916 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:03:38 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54918 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:03:38 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54920 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:03:38 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54922 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:03:38 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54924 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:04:16 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54929 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:04:16 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54931 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:04:16 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54933 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:04:16 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54935 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:04:17 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54937 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:04:23 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54940 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:04:23 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54942 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:04:23 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54944 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:04:23 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54946 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:04:23 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54948 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:04:30 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:54950 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T12:04:36 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:54952 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T12:04:38 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:54952 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T12:04:41 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54955 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:04:41 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54957 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:04:41 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54959 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:04:41 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54961 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:04:41 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54963 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:04:49 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54965 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:04:49 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54967 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:04:49 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54969 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:04:49 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54971 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:04:49 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54973 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:04:52 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54976 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:04:52 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54978 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:04:52 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54980 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:04:52 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54982 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:04:52 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54984 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:05:36 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:54989 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:05:36 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:54991 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:05:36 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:54993 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:05:36 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:54995 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:05:36 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:54997 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:05:46 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:54999 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T12:05:49 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55002 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:05:49 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55004 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:05:49 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55006 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:05:49 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55008 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:05:49 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55010 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:05:58 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55012 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:05:58 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55014 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:05:58 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55016 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:05:58 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55018 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:05:59 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55020 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:06:00 [INFO] ledgerlens — Received upload: sample-amazon-2.png (24234 bytes)
+[REDACTED]T12:06:00 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+[REDACTED]T12:06:00 [INFO] ledgerlens — Sending image to qwen/qwen3.6-27b for extraction (62826 bytes after resize)
+[REDACTED]T12:06:31 [ERROR] ledgerlens — Failed to parse AI response as InvoiceExtraction. Raw content: 
+<think>
+The user wants me to extract data from an Amazon receipt image into a specific JSON format.
+
+**1. Analyze the Image:**
+- **Vendor:** "amazon" logo is prominent. Text says "Amazon.com".
+- **Address:** "410 Terry Avenue North, Seattle, WA 98109".
+- **Phone:** "[REDACTED]".
+- **Date/Time:** "11/15/2024, 2:34:18 PM".
+- **Order Number:** "#[REDACTED]".
+- **Sold By:** "Amazon.com Services LLC".
+- **Line Items:**
+    1.  "1 Anker USB C Charger 20W" - $12,[REDACTED]"2 Amazon Basics AA Batteries (48-Pack)" - $18,[REDACTED]"1 Fire TV Stick 4K" - $49,[REDACTED]"1 Echo Dot (5th Gen)" - $49,99
+- **Totals:**
+    - Subtotal: $131,96
+    - Shipping & Handling: $0,00
+    - Tax: $11,86
+    - Order Total: $143,82
+- **Payment Info:**
+    - Card Type: Visa
+    - Card Number: ****[REDACTED]Amount Charged: $143,82
+
+**2. Map to Schema:**
+- `vendor`: "Amazon.com" (Confidence: 1.0)
+- `invoice_number`: "#[REDACTED]" (Confidence: 1.0)
+- `date`: "[REDACTED]" (Confidence: 1.0)
+- `currency`: "USD" (Inferred from "$" symbol and US address. Confidence: 1.0)
+- `subtotal`: 131.96 (Confidence: 1.0)
+- `tax`: 11.86 (Confidence: 1.0)
+- `total`: 143.82 (Confidence: 1.0)
+- `line_items`:
+    - Item 1: "Anker USB C Charger 20W", Qty: 1, Price: 12.99, Amount:[REDACTED]Item 2: "Amazon Basics AA Batteries (48-Pack)", Qty: 2, Price: 18.99, Amount: 18.99 (Wait, looking closely at the image, the price is listed as $18,99 next to the item. Is that per unit or total? Usually, on Amazon receipts, the price listed is the total for that line. Let's check the math. 12.99 + 18.99 + 49.99 + 49.99 = 131.96. Yes, the listed price is the line total. So for item 2, quantity is 2, but the price listed is the total for the line. Wait, let me re-read. "2 Amazon Basics AA Batteries... $18,99". If I buy 2 packs for $18.99 total, that's $9.50 each. If I buy 1 pack of 48 batteries for $18.99, that makes more sense. Let's look at the quantity column. It says "2". So quantity is 2. The price is $18.99. Is that unit price or line total?
+    - Let's check the subtotal math again[REDACTED]+ 18.99 + 49.99 + 49.99 =[REDACTED]This implies the $18.99 is the *total* for that line item, regardless of quantity. Or maybe the quantity is actually 1 and the "2" is part of the description? No, "2" is clearly in the quantity column.
+    - Let's look at the other items. "1 Anker...", "1 Fire TV...", "1 Echo Dot...".
+    - So for the batteries, Qty=2, Total=$18.99. This means Unit Price = 18.99 / 2 =[REDACTED]However, usually, the schema asks for `unit_price` and `amount`.
+    - If the receipt lists "$18,99" next to "2 Amazon Basics...", it's ambiguous if that's unit or total. But given the subtotal math (12.99 + 18.99 + 49.99 + 49.99 = 131.96), the $18.99 is definitely the line total.
+    - So for the JSON:[REDACTED]Item 1: Desc: "Anker USB C Charger 20W", Qty: 1, Unit: 12.99, Amount:[REDACTED]Item 2: Desc: "Amazon Basics AA Batteries (48-Pack)", Qty: 2, Unit: 9.495 (calculated), Amount: 18.99. OR, maybe the receipt implies the price is per unit and the subtotal is wrong? No, subtotals are usually correct[REDACTED]Actually, looking really closely at the second item line: "2 Amazon Basics AA Batteries (48-Pack) $18,99". It's possible the user bought 2 packs for a total of $18.99. Or maybe the "2" is a typo in my reading? No, it's clearly a "2"[REDACTED]Let's assume the listed price is the line total amount[REDACTED]Wait, let's look at the first item. "1 Anker... $12,99"[REDACTED]Third item: "1 Fire TV... $49,99"[REDACTED]Fourth item: "1 Echo Dot... $49,99"[REDACTED]Sum: 12.99 + 18.99 + 49.99 + 49.99 =[REDACTED]Okay, so the value on the right is the line total[REDACTED]For the JSON `unit_price`, I should probably put the value that makes sense. If Qty is 2 and Total is 18.99, Unit Price is ~9.50. But often receipts just list the total. I will set `unit_price` to the value shown if Qty is 1, or calculate it if Qty > 1. Or, simpler, just put the value shown as `amount` and `unit_price` if Qty is 1. For Qty 2, I'll calculate unit price or just put the total in amount and maybe the total in unit_price if I can't be sure[REDACTED]Actually, looking at the layout, it's `Qty Description Price`[REDACTED]So for item 2: Qty=2, Price=$18.99. This is likely the total price for the 2 items[REDACTED]I will extract `amount` as 18.99. `unit_price` I will estimate as 9.50 or just leave it as the total if the schema allows, but the schema asks for `unit_price`. I'll calculate 18.99 / 2 =[REDACTED]Wait, let's look at the image again. Is it possible the "2" is part of the product name? "2 Amazon Basics..." No, it's aligned with the "1"s above and below[REDACTED]Let's assume the price listed is the line total[REDACTED]Item 1: Qty 1, Price[REDACTED]Item 2: Qty 2, Price[REDACTED]Item 3: Qty 1, Price[REDACTED]Item 4: Qty 1, Price[REDACTED]Total:[REDACTED]This confirms the rightmost column is the line total[REDACTED]So for Item 2, `amount` is 18.99. `unit_price` is 18.99 / 2 =[REDACTED]However, usually in these tasks, if the receipt doesn't explicitly state unit price, I might just put the line total in `amount` and maybe the same in `unit_price` if I'm unsure, or calculate. I'll calculate[REDACTED]Actually, looking at the receipt, it's possible the "2" refers to the pack size? No, "(48-Pack)" is in parens[REDACTED]Let's just extract what is visible[REDACTED]Item 2: Description "Amazon Basics AA Batteries (48-Pack)", Quantity 2, Amount 18.99. Unit Price: 9.50 (approx). I'll use[REDACTED]Wait, looking closer at the second line. "2 Amazon Basics AA Batteries (48-Pack) $18,99"[REDACTED]Maybe the user bought 2 packs of 48 batteries for $18.99 total? That's very cheap ($9.50 for 48 batteries). Or maybe it's 2 packs of AA batteries (standard 4-pack or 8-pack) and the "(48-Pack)" is a variant name? No, "(48-Pack)" usually means 48 batteries[REDACTED]Maybe the "2" is the quantity of *items* (e.g. 2 packs), and the price is per pack? If price is per pack ($18.99), then total would be 37.98. But subtotal is[REDACTED]+ 37.98 + 49.99 + 49.99 = 150.95. This does not match[REDACTED]Therefore, the $18.99 MUST be the total for that line[REDACTED]So Qty=2, Total=18.99. Unit Price =[REDACTED]I will set `unit_price` to 9.50 (rounded) or just 18.99 if I treat the listed price as the unit price and the quantity is just a label? No, that breaks the math[REDACTED]I will set `unit_price` to 9.50 and `amount` to[REDACTED]Actually, looking at the receipt again, maybe the "2" is a typo in my reading? No, it's clearly a "2"[REDACTED]Let's look at the first item. "1 Anker..."[REDACTED]Let's look at the third item. "1 Fire TV..."[REDACTED]Let's look at the fourth item. "1 Echo Dot..."[REDACTED]Okay, I will proceed with Qty=2, Amount=18.99.
+
+**3. Construct JSON:**
+- `vendor`: "Amazon.com"
+- `invoice_number`: "#[REDACTED]"
+- `date`: "[REDACTED]"
+- `currency`: "USD"
+- `subtotal`:[REDACTED]`tax`: 11.86
+- `total`:[REDACTED]`line_items`:
+    - {desc: "Anker USB C Charger 20W", qty: 1, unit: 12.99, amount: 12.99}
+    - {desc: "Amazon Basics AA Batteries (48-Pack)", qty: 2, unit: 9.50, amount: 18.99} -> Wait, 18.99/2 is 9.495. I'll use 9.50. Or maybe the receipt implies the price is for the whole line. I'll put 18.99 in amount. For unit_price, I'll put[REDACTED]{desc: "Fire TV Stick 4K", qty: 1, unit: 49.99, amount: 49.99}
+    - {desc: "Echo Dot (5th Gen)", qty: 1, unit: 49.99, amount: 49.99}
+
+**Refinement on Line Item 2:**
+- It's possible the "2" is actually part of the product name? "2 Amazon Basics..." No, alignment suggests quantity.
+- It's possible the price $18.99 is the unit price and the subtotal calculation in the receipt is weird? No, 12.99+18.99+49.99+49.99 = 131.96. The math holds perfectly if $18.99 is the line total.
+- So, Qty=2, Line Total=18.99.
+- I will extract `unit_price` as 9.50 (rounded from 9.495) or just leave it as the total if I'm unsure. The schema asks for `unit_price`. I'll calculate it. 18.99 / 2 = 9.495. I'll use 9.50.
+
+**Final Check:**
+- Vendor: Amazon.com
+- Order #: #[REDACTED]Date:[REDACTED]Currency: USD
+- Subtotal:[REDACTED]Tax: 11.86
+- Total:[REDACTED]Items:
+    1. Anker USB C Charger 20W, 1, 12.99,[REDACTED]Amazon Basics AA Batteries (48-Pack), 2, 9.50,[REDACTED]Fire TV Stick 4K, 1, 49.99,[REDACTED]Echo Dot (5th Gen), 1, 49.99, 49.99
+
+Wait, looking at the image again, the second item line is:
+"2 Amazon Basics AA Batteries (48-Pack) $18,99"
+Is it possible the quantity is 1 and the "2" is part of the name? No, the "1"s are aligned.
+Is it possible the price is $18.99 per pack and the subtotal is wrong? Unlikely.
+Is it possible the price is $18.99 for the 2 packs? Yes, that's the only math that works.
+So Unit Price = 9.495. I will use 9.50.
+
+One detail: The prompt asks for `unit_price`. If I can't be 100% sure of the unit price (since it's not explicitly listed, only the total), I should be careful. But the math is clear.
+Actually, looking at the receipt, maybe the "2" is the quantity of *batteries*? No, "(48-Pack)" implies the pack size.
+Maybe the user bought 2 packs of 48 batteries? That would be 96 batteries.
+Or maybe the user bought 2 items, and the item is "Amazon Basics AA Batteries (48-Pack)".
+Okay, I'll stick with Qty=2, Amount=18.99.
+
+Let's double check the `unit_price` for item 2. If I put 18.99, then `amount` would be 37.98, which contradicts the subtotal. So `unit_price` must be ~9.50.
+However, often in these extractions, if the unit price isn't explicit, it's safer to put the line total in `amount` and maybe the same in `unit_price` if the quantity is 1. Here quantity is 2.
+I will calculate unit price as 9.50.
+
+Wait, looking at the receipt again.
+"1 Anker USB C Charger 20W $12,99"
+"2 Amazon Basics AA Batteries (48-Pack) $18,99"
+"1 Fire TV Stick 4K $49,99"
+"1 Echo Dot (5th Gen) $49,99"
+
+Is it possible that the "2" is actually a "1" that looks like a "2"? No, it's clearly a "2".
+Is it possible the price is $18.99 and the quantity is 1, and the "2" is a typo in the receipt?
+If Qty=1, Total=18.99. Sum = 12.99 + 18.99 + 49.99 + 49.99 = 131.96.
+This matches the subtotal perfectly.
+So, mathematically, the contribution to the subtotal is 18.99.
+If Qty=2, then Unit Price = 9.495.
+If Qty=1, then Unit Price = 18.99.
+Visually, the number is "2".
+So I must assume Qty=2 and Unit Price=9.50.
+
+Let's look at the "Sold By" line. "Amazon.com Services LLC".
+Let's look at the "Card Type". "Visa".
+Let's look at "Card Number". "****4523".
+
+Okay, ready to generate JSON.
+</think>
+
+```json
+{
+    "vendor": {
+        "value": "Amazon.com",
+        "confidence": 1.0
+    },
+    "invoice_number": {
+        "value": "#[REDACTED]",
+        "confidence": 1.0
+    },
+   
+[REDACTED]T12:06:31 [ERROR] ledgerlens — Extraction failed for sample-amazon-2.png
+Traceback (most recent call last):
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 159, in extract_invoice
+    data = json.loads(json_str)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/api/routes.py", line 121, in ingest
     ext_result = extraction_svc.extract_invoice(image_bytes)
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 109, in extract_invoice
-    response = client.chat.completions.create(
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 298, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
-    return self._post(
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1360, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1133, in request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama-3.2-11b-vision-preview` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
-[REDACTED]T10:34:08 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
-INFO:     127.0.0.1:64316 - "POST /ingest HTTP/1.1" 500 Internal Server Error
-[REDACTED]T10:34:08 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64319 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:34:08 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64321 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:34:08 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64323 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:34:08 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64325 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:34:08 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64327 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:36:57 [INFO] ledgerlens — GET /health →[REDACTED]s)
-INFO:     127.0.0.1:64419 - "GET /health HTTP/1.1" 200 OK
-[REDACTED]T10:37:22 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64436 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:37:22 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64438 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:37:22 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64440 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:37:22 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64442 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:37:22 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64444 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:37:29 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64448 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:37:29 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64450 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:37:29 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64452 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:37:29 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64454 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:37:29 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64456 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:37:30 [INFO] ledgerlens — Received upload: Screenshot[REDACTED]at 2.48.38 PM.png (128926 bytes)
-[REDACTED]T10:37:30 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
-[REDACTED]T10:37:30 [INFO] ledgerlens — Resized image from 2242x938 to 2048x856
-[REDACTED]T10:37:30 [INFO] ledgerlens — Sending image to llama-3.2-11b-vision-preview for extraction (124669 bytes after resize)
-[REDACTED]T10:37:31 [ERROR] ledgerlens — Extraction failed for Screenshot[REDACTED]at 2.48.38 PM.png
-Traceback (most recent call last):
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/api/routes.py", line 121, in ingest
-    ext_result = extraction_svc.extract_invoice(image_bytes)
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 109, in extract_invoice
-    response = client.chat.completions.create(
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 298, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
-    return self._post(
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1360, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1133, in request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama-3.2-11b-vision-preview` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
-[REDACTED]T10:37:31 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
-INFO:     127.0.0.1:64460 - "POST /ingest HTTP/1.1" 500 Internal Server Error
-[REDACTED]T10:37:31 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64463 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:37:31 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64465 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:37:31 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64467 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:37:31 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64469 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:37:31 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64471 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:37:48 [INFO] ledgerlens — GET /health →[REDACTED]s)
-INFO:     127.0.0.1:64481 - "GET /health HTTP/1.1" 200 OK
-[REDACTED]T10:37:56 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64489 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:37:56 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64491 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:37:56 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64493 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:37:56 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64495 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:37:56 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64497 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:38:03 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64503 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:38:03 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64505 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:38:03 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64507 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:38:03 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64509 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:38:03 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64511 - "GET /dashboard/daily HTTP/1.1" 200 OK
-[REDACTED]T10:38:04 [INFO] ledgerlens — Received upload: Screenshot[REDACTED]at 2.48.38 PM.png (128926 bytes)
-[REDACTED]T10:38:04 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
-[REDACTED]T10:38:05 [INFO] ledgerlens — Resized image from 2242x938 to 2048x856
-[REDACTED]T10:38:05 [INFO] ledgerlens — Sending image to llama-3.2-11b-vision-preview for extraction (124669 bytes after resize)
-[REDACTED]T10:38:05 [ERROR] ledgerlens — Extraction failed for Screenshot[REDACTED]at 2.48.38 PM.png
-Traceback (most recent call last):
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/api/routes.py", line 121, in ingest
-    ext_result = extraction_svc.extract_invoice(image_bytes)
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 109, in extract_invoice
-    response = client.chat.completions.create(
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 298, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
-    return self._post(
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1360, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/midhun/Documents/iitrootkee/ledgerlens/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1133, in request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama-3.2-11b-vision-preview` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
-[REDACTED]T10:38:05 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
-INFO:     127.0.0.1:64513 - "POST /ingest HTTP/1.1" 500 Internal Server Error
-[REDACTED]T10:38:05 [INFO] ledgerlens — GET /documents →[REDACTED]s)
-INFO:     127.0.0.1:64516 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
-[REDACTED]T10:38:05 [INFO] ledgerlens — GET /review →[REDACTED]s)
-INFO:     127.0.0.1:64518 - "GET /review HTTP/1.1" 200 OK
-[REDACTED]T10:38:05 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
-INFO:     127.0.0.1:64520 - "GET /dashboard HTTP/1.1" 200 OK
-[REDACTED]T10:38:05 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
-INFO:     127.0.0.1:64522 - "GET /dashboard/status HTTP/1.1" 200 OK
-[REDACTED]T10:38:05 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
-INFO:     127.0.0.1:64524 - "GET /dashboard/daily HTTP/1.1" 200 OK
+  File "/Users/midhun/Documents/iitrootkee/ledgerlens/backend/services/extraction.py", line 163, in extract_invoice
+    raise RuntimeError(f"Failed to parse extraction result: {str(e)}")
+RuntimeError: Failed to parse extraction result: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[REDACTED]T12:06:31 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:55022 - "POST /ingest HTTP/1.1" 500 Internal Server Error
+[REDACTED]T12:06:31 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55029 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:06:31 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55031 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:06:31 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55033 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:06:31 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55035 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:06:31 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55037 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:06:34 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55040 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:06:34 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55042 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:06:34 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55044 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:06:34 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55046 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:06:34 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55048 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:06:35 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55052 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:06:35 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55054 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:06:35 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55056 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:06:35 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55058 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:06:35 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55060 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:06:56 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55063 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:06:56 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55065 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:06:56 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55067 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:06:56 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55069 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:06:56 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55071 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:07:00 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:55073 - "GET /health HTTP/1.1" 200 OK
+[REDACTED]T12:07:12 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55075 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:12 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55077 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:12 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55079 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:07:12 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55081 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:07:12 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55083 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:07:14 [INFO] ledgerlens — Received upload: sample-images.png (46966 bytes)
+[REDACTED]T12:07:14 [INFO] ledgerlens — Bypassing moderation gate (Groq/non-OpenAI provider active)
+[REDACTED]T12:07:14 [INFO] ledgerlens — Sending image to qwen/qwen3.6-27b for extraction (227096 bytes after resize)
+[REDACTED]T12:07:34 [INFO] ledgerlens — Extraction complete. vendor=Cloudtail India Private Limited overall_confidence=0.98 tokens=5334 cost=$0.02667
+[REDACTED]T12:07:34 [INFO] ledgerlens — Watermarked image saved: processed/0_watermarked.png
+[REDACTED]T12:07:34 [INFO] ledgerlens — Ingest complete: doc_id=12 status=auto_approved flagged=0
+[REDACTED]T12:07:34 [INFO] ledgerlens — POST /ingest →[REDACTED]s)
+INFO:     127.0.0.1:55085 - "POST /ingest HTTP/1.1" 200 OK
+[REDACTED]T12:07:34 [INFO] ledgerlens — GET /processed/12 →[REDACTED]s)
+INFO:     127.0.0.1:55089 - "GET /processed/12 HTTP/1.1" 200 OK
+[REDACTED]T12:07:34 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55091 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:34 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55093 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:34 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55095 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:07:34 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55097 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:07:34 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55099 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:07:50 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55101 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:50 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55103 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:50 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55105 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:50 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55107 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:07:50 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55109 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:07:50 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55111 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55113 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55115 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55117 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55119 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55121 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55123 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:07:53 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55125 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55127 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55129 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /documents →[REDACTED]s)
+INFO:     127.0.0.1:55131 - "GET /documents?vendor=&filename=&status=&page=1&page_size=10&sort_by=id&order=desc HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /review →[REDACTED]s)
+INFO:     127.0.0.1:55133 - "GET /review HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /dashboard →[REDACTED]s)
+INFO:     127.0.0.1:55135 - "GET /dashboard HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /dashboard/status →[REDACTED]s)
+INFO:     127.0.0.1:55137 - "GET /dashboard/status HTTP/1.1" 200 OK
+[REDACTED]T12:07:54 [INFO] ledgerlens — GET /dashboard/daily →[REDACTED]s)
+INFO:     127.0.0.1:55139 - "GET /dashboard/daily HTTP/1.1" 200 OK
+[REDACTED]T12:08:04 [INFO] ledgerlens — GET /health →[REDACTED]s)
+INFO:     127.0.0.1:55143 - "GET /health HTTP/1.1" 200 OK
